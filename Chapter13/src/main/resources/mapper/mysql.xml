@@ -16,8 +16,8 @@
     <!--添加用户接口-->
     <insert id="addUser" parameterType="com.course.model.User">
         insert into
-        user (id,userName,password,sex,age,permission,isDelete)
-        values (#{id},#{userName},#{password},#{sex},#{age},#{permission},#{isDelete});
+        user (userName,password,sex,age,permission,isDelete)
+        values (#{userName},#{password},#{sex},#{age},#{permission},#{isDelete});
     </insert>
 
     <!--获取用户信息sql-->
@@ -66,7 +66,7 @@
                 isDelete=#{isDelete},
             </if>
         </trim>
-        where id = #{id}
+        where id =#{id};
     </update>
 
 </mapper>

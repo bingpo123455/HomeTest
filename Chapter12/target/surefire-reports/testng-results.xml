@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="用户管理系统测试套件" duration-ms="18785" started-at="2019-12-16T09:08:30Z" finished-at="2019-12-16T09:08:49Z">
+    <groups>
+      <group name="loginTrue">
+        <method signature="LoginTest.loginTrue()[pri:0, instance:com.course.cases.LoginTest@880ec60]" name="loginTrue" class="com.course.cases.LoginTest"/>
+      </group> <!-- loginTrue -->
+    </groups>
+    <test name="用户管理系统测试用例" duration-ms="18785" started-at="2019-12-16T09:08:30Z" finished-at="2019-12-16T09:08:49Z">
+      <class name="com.course.cases.UpdateUserInfoTest">
+        <test-method status="PASS" signature="updateUserInfo()[pri:0, instance:com.course.cases.UpdateUserInfoTest@39ba5a14]" name="updateUserInfo" duration-ms="5049" depends-on-groups="loginTrue" started-at="2019-12-16T17:08:39Z" description="鏇存敼鐢ㄦ埛淇℃伅" finished-at="2019-12-16T17:08:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUserInfo -->
+        <test-method status="PASS" signature="deleteUser()[pri:0, instance:com.course.cases.UpdateUserInfoTest@39ba5a14]" name="deleteUser" duration-ms="5025" depends-on-groups="loginTrue" started-at="2019-12-16T17:08:44Z" description="鍒犻櫎鐢ㄦ埛" finished-at="2019-12-16T17:08:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUser -->
+      </class> <!-- com.course.cases.UpdateUserInfoTest -->
+      <class name="com.course.cases.LoginTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.course.cases.LoginTest@880ec60]" name="beforeTest" is-config="true" duration-ms="48" started-at="2019-12-16T17:08:30Z" description="娴嬭瘯鍑嗗宸ヤ綔,鑾峰彇HttpClient瀵硅薄" finished-at="2019-12-16T17:08:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="loginTrue()[pri:0, instance:com.course.cases.LoginTest@880ec60]" name="loginTrue" duration-ms="1418" started-at="2019-12-16T17:08:30Z" description="鐢ㄦ埛鎴愬姛鐧婚檰鎺ュ彛" finished-at="2019-12-16T17:08:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTrue -->
+        <test-method status="PASS" signature="loginFalse()[pri:0, instance:com.course.cases.LoginTest@880ec60]" name="loginFalse" duration-ms="52" started-at="2019-12-16T17:08:32Z" description="鐢ㄦ埛鐧婚檰澶辫触鎺ュ彛" finished-at="2019-12-16T17:08:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFalse -->
+      </class> <!-- com.course.cases.LoginTest -->
+      <class name="com.course.cases.GetUserInfoTest">
+        <test-method status="PASS" signature="getUserInfo()[pri:0, instance:com.course.cases.GetUserInfoTest@36d64342]" name="getUserInfo" duration-ms="2079" depends-on-groups="loginTrue" started-at="2019-12-16T17:08:37Z" description="鑾峰彇userId涓�1鐨勭敤鎴蜂俊鎭�" finished-at="2019-12-16T17:08:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserInfo -->
+      </class> <!-- com.course.cases.GetUserInfoTest -->
+      <class name="com.course.cases.AddUserTest">
+        <test-method status="PASS" signature="addUser()[pri:0, instance:com.course.cases.AddUserTest@3f3afe78]" name="addUser" duration-ms="5063" depends-on-groups="loginTrue" started-at="2019-12-16T17:08:32Z" description="娣诲姞鐢ㄦ埛鎺ュ彛鎺ュ彛" finished-at="2019-12-16T17:08:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addUser -->
+      </class> <!-- com.course.cases.AddUserTest -->
+      <class name="com.course.cases.GetUserInfoListTest">
+        <test-method status="PASS" signature="getUserListInfo()[pri:0, instance:com.course.cases.GetUserInfoListTest@511baa65]" name="getUserListInfo" duration-ms="30" depends-on-groups="loginTrue" started-at="2019-12-16T17:08:49Z" description="鑾峰彇鎬у埆涓虹敺鐨勭敤鎴蜂俊鎭�" finished-at="2019-12-16T17:08:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUserListInfo -->
+      </class> <!-- com.course.cases.GetUserInfoListTest -->
+    </test> <!-- 用户管理系统测试用例 -->
+  </suite> <!-- 用户管理系统测试套件 -->
+</testng-results>
