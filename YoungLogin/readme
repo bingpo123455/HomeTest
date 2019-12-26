@@ -1,0 +1,12 @@
+1. 验证手机号  开发测试类：ValidatePhoneTest
+               基本类（数据库表名）：ValidatePhoneCase
+2..注册接口    开发测试类：RegisterTest
+               基本类（数据库表名）：RegisterCase
+3.发送短信验证码接口   开发测试类：SendSmsCodeForClientTest
+                        基本类（数据库表名）：SendSmsCodeForClientCase
+4.发送短信验证码接口(登录后)  开发测试类：SendSmsCodeForForgetTest
+                              基本类（数据库表名）：SendSmsCodeForForgetCase
+5.验证短信验证码接口  开发测试类：ValidateSmsCodeTest
+                      基本类（数据库表名）：ValidateSmsCodeCase
+6.设置陪伴密码接口    开发测试类：SetCPasswordTest
+                       基本类（数据库表名）：SetCPasswordCase

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="花漾搜索系统">
+    <test name="花漾搜索登录接口测试">
+        <classes>
+            <!--准备工作  给URL赋值，创建httpClient对象-->
+            <class name="com.youngLogin.cases.ReadyTest">
+                <methods>
+                    <include name="beforeTest"/>
+                </methods>
+            </class>
+            <!--1.验证手机号测试接口-->
+              <class name="com.youngLogin.cases.ValidatePhoneTest">
+                 <methods>
+                    <include name="validatePhone1"/>
+                     <include name="validatePhone2"/>
+                     <include name="validatePhone3"/>
+                     <include name="validatePhone4"/>
+                     <include name="validatePhone5"/>
+                </methods>
+            </class>
+            <!--2.手机号密码注册测试接口-->
+             <class name="com.youngLogin.cases.RegisterTest">
+                 <methods>
+                     <include name="register1"/>
+                    <include name="register2"/>
+                    <include name="register3"/>
+                    <include name="register4"/>
+                    <include name="register5"/>
+                    <include name="register6"/>
+
+                </methods>
+            </class>
+            <!--3.发送手机号验证码测试接口-->
+             <class name="com.youngLogin.cases.SendSmsCodeForClientTest">
+               <methods>
+                 <include name="sendSmsCodeForClient1"/>
+               </methods>
+           </class>
+            <!--               设置陪伴密码依赖登录     登录后重设账号密码          -->
+            <class name="com.youngLogin.cases.LoginTest">
+                <methods>
+                    <include name="loginTrue"/>
+                </methods>
+            </class>
+            <!--4.发送手机验证码（登录后）测试接口-->
+              <class name="com.youngLogin.cases.SendSmsCodeForForgetTest">
+                 <methods>
+                    <include name="sendSmsCodeForForget1"/>
+                </methods>
+            </class>
+            <!--5.验证手机验证码测试接口-->
+               <class name="com.youngLogin.cases.ValidateSmsCodeTest">
+                  <methods>
+                     <include name="validateSmsCode1"/>
+                     <include name="validateSmsCode2"/>
+                     <include name="validateSmsCode3"/>
+                </methods>
+            </class>
+
+            <!--6.设置陪伴密码测试接口-->
+             <class name="com.youngLogin.cases.SetCPasswordTest">
+                 <methods>
+                     <include name=" setCPassword1"/>
+                     <include name=" setCPassword2"/>
+                     <include name=" setCPassword3"/>
+                </methods>
+            </class>
+            <!--7.验证陪伴密码测试接口-->
+                <class name="com.youngLogin.cases.VerifyCPasswordTest">
+                   <methods>
+                      <include name="verifyCPassword1"/>
+                      <include name="verifyCPassword2"/>
+                </methods>
+            </class>
+            <!--8.修改登录之后密码测试接口-->
+             <class name="com.youngLogin.cases.SetPasswordTest">
+                 <methods>
+                     <include name="setPassword1"/>
+                 </methods>
+             </class>
+            <!--9.修改密码接口（需要短信验证）测试接口-->
+            <class name="com.youngLogin.cases.ResetPasswordTest">
+                <methods>
+                    <include name="resetPassword1"/>
+                    <include name="resetPassword2"/>
+                </methods>
+            </class>
+            <!--手机号密码登录测试接口-->
+            <!--   <class name="com.youngLogin.cases.LoginTest">
+                 <methods>
+                    <include name="loginTrue"/>
+                    <include name="loginFalse2"/>
+                     <include name="loginFalse3"/>
+                     <include name="loginFalse4"/>
+                     <include name="loginFalse5"/>
+                </methods>
+            </class>-->
+            <!--用户中心任务进度bar测试接口-->
+            <!--  <class name="com.youngLogin.cases.DailyMissionBarTest">
+                 <methods>
+                    <include name="dailyMissionBar1"/>
+                </methods>
+            </class>-->
+
+
+
+
+            <!--获取图形验证码测试接口-->
+           <!-- <class name="com.youngLogin.cases.CaptchaForClientTest">
+                <methods>
+                    <include name="captchaForClient1"/>
+                </methods>
+            </class>-->
+            <!--验证图形验证码测试接口-->
+           <!-- <class name="com.youngLogin.cases.ValidateCaptchaForClientTest">
+                <methods>
+                    <include name="validateCaptchaForClient1"/>
+                    <include name="validateCaptchaForClient2"/>
+                </methods>
+            </class>-->
+            <!--刷新token测试接口-->
+            <!--<class name="com.youngLogin.cases.FreshTokenTest">
+                <methods>
+                    <include name="freshToken1"/>
+                </methods>
+            </class>-->
+            <!--用户失效测试接口-->
+            <!--<class name="com.youngLogin.cases.InvalidUserTest">
+                <methods>
+                    <include name="invalidUser1"/>
+                </methods>
+            </class>-->
+            <!--用户登出测试接口-->
+           <!-- <class name="com.youngLogin.cases.LogoutTest">
+                <methods>
+                    <include name="logout1"/>
+                </methods>
+            </class>-->
+            <!--一键登录测试接口-->
+           <!-- <class name="com.youngLogin.cases.PhoneLoginTest">
+                <methods>
+                    <include name="phoneLogin1"/>
+                </methods>
+            </class>-->
+            <!--发送短信验证码登录测试接口-->
+           <!-- <class name="com.youngLogin.cases.SmsLoginTest">
+                <methods>
+                    <include name="smsLogin1"/>
+                </methods>
+            </class>-->
+            <!--信验证码登陆接口(摄影大赛)测试接口{这个接口已经停用了}-->
+            <!--<class name="com.youngLogin.cases.SmsLoginForPicTest">
+                <methods>
+                    <include name="smsLoginForPic1"/>
+                </methods>
+            </class>-->
+            <!--短信验证码注册测试接口-->
+           <!-- <class name="com.youngLogin.cases.StartRegisterTest">
+                <methods>
+                    <include name="startRegister1"/>
+                </methods>
+            </class>-->
+            <!--完成注册测试接口-->
+            <!--<class name="com.youngLogin.cases.FinishRegisterTest">
+                <methods>
+                    <include name="finishRegister1"/>
+                </methods>
+            </class>-->
+            <!--生成图形验证码测试接口-->
+            <!--<class name="com.youngLogin.cases.CaptchaTest">wechatLogin1
+                <methods>
+                    <include name="captcha1"/>
+                </methods>
+            </class>-->
+            <!--首次进入，逛逛测试接口-->
+           <!-- <class name="com.youngLogin.cases.LoginGGTest">
+                <methods>
+                    <include name="loginGG1"/>
+                </methods>
+            </class>-->
+            <!--微信第三方登陆测试接口-->
+           <!-- <class name="com.youngLogin.cases.WechatLoginTest">
+                <methods>
+                    <include name="wechatLogin1"/>
+                </methods>
+            </class>-->
+        </classes>
+
+
+    </test>
+    <listeners>
+        <listener class-name="com.young.config.ExtentTestNGIReporterListener" />
+    </listeners>
+</suite>

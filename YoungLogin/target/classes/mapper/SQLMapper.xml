@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间mapper,如果有多个mapper文件，这个必须唯一 -->
+<mapper namespace="com.youngLogin.model">
+
+<!--验证手机号接口case，在数据库中通过id查询测试用例-->
+    <select id="validatePhoneCase" parameterType="Integer" resultType="com.youngLogin.model.ValidatePhoneCase">
+    select * from validatePhoneCase
+    where id = #{id}
+    </select>
+
+    <!--获取登陆接口case-->
+  <select id="loginCase" parameterType="Integer"  resultType="com.youngLogin.model.LoginCase">
+        select * from logincase
+        where id = #{id};
+    </select>
+
+
+<!--用户中心任务进度条case-->
+    <select id="dailyMissionBarCase" parameterType="Integer" resultType="com.youngLogin.model.DailyMissionBarCase">
+         select * from dailymissionbarcase
+         where id=#{id}
+     </select>
+
+<!--注册接口case-->
+    <select id="registerCase" parameterType="Integer" resultType="com.youngLogin.model.RegisterCase">
+        select * from registercase
+        where id=#{id}
+    </select>
+<!--更新注册接口case-->
+    <update id="updateRegisterCase" parameterType="com.youngLogin.model.RegisterCase">
+        update registercase
+        SET phone=#{phone},password=#{password},picCode=#{picCode},isEncrypt=#{isEncrypt},deviceid=#{deviceid},deviceid=#{deviceid},expected=#{expected}
+        where id=#{id}
+    </update>
+<!--发送短信验证码接口case-->
+    <select id="sendSmsCodeForClientCase" parameterType="Integer" resultType="com.youngLogin.model.SendSmsCodeForClientCase">
+        select * from sendsmscodeforclientcase
+        where id=#{id}
+    </select>
+<!--要让验证手机验证码的手机号  与   发送验证码的手机号一致-->
+    <update id="updateValidateSmsCodeCase" parameterType="com.youngLogin.model.ValidateSmsCodeCase">
+        update validatesmscodecase
+        set phone=#{phone},smsCode=#{smsCode},isEncrypt=#{isEncrypt},status=#{status},expected=#{expected}
+        where id=#{id}
+    </update>
+<!--发送短信验证码接口case（登录后）-->
+    <select id="sendSmsCodeForForgetCase" parameterType="Integer" resultType="com.youngLogin.model.SendSmsCodeForForgetCase">
+        select * from sendsmscodeforforgetcase
+        where id=#{id}
+    </select>
+<!--验证短信验证码接口case-->
+    <select id="validateSmsCodeCase" parameterType="Integer" resultType="com.youngLogin.model.ValidateSmsCodeCase">
+        select * from validatesmscodecase
+        where id=#{id}
+    </select>
+<!--设置陪伴密码接口case-->
+    <select id="setCPasswordCase" parameterType="Integer" resultType="com.youngLogin.model.SetCPasswordCase">
+        select * from setcpasswordcase
+        where id=#{id}
+    </select>
+<!--更新陪伴密码 数据库 密码数据-->
+    <update id="updatePassword" parameterType="com.youngLogin.model.SetCPasswordCase">
+        update setcpasswordcase
+        set cpassword=#{cpassword},isEncrypt=#{isEncrypt},status=#{status},expected=#{expected}
+        where id=#{id}
+    </update>
+<!--  更新验证陪伴库里的密码第一条 -->
+    <update id="updateVerifyCPasswordCase" parameterType="com.youngLogin.model.VerifyCPasswordCase">
+        update verifycpasswordcase
+        set cpassword=#{cpassword},isEncrypt=#{isEncrypt},status=#{status},expected=#{expected}
+        where id=#{id}
+    </update>
+<!--验证陪伴密码case-->
+    <select id="verifyCPasswordCase" parameterType="Integer" resultType="com.youngLogin.model.VerifyCPasswordCase">
+        select * from verifycpasswordcase
+        where id=#{id}
+    </select>
+<!--修改登录之后密码接口-->
+    <select id="setPasswordCase" parameterType="Integer" resultType="com.youngLogin.model.SetPasswordCase">
+        select * from setpasswordcase
+        where id =#{id}
+    </select>
+<!--更新登录接口密码case-->
+    <update id="updateLoginCase" parameterType="com.youngLogin.model.LoginCase">
+        update logincase
+        set phone =#{phone},
+                password =#{password},
+                    picCode =#{picCode},
+                        isEncrypt =#{isEncrypt},
+                            deviceid =#{deviceid},
+                                status =#{status},
+                                    expected =#{expected}
+         where id=#{id}
+    </update>
+ <!--修改密码接口（需要短信验证）case-->
+    <select id="resetPasswordCase" parameterType="Integer" resultType="com.youngLogin.model.ResetPasswordCase">
+        select * from resetpasswordcase
+        where id=#{id}
+    </select>
+<!-- 获取图形验证码接口case   -->
+    <select id="captchaForClientCase" parameterType="Integer" resultType="com.youngLogin.model.CaptchaForClientCase">
+        select * from captchaforclientCase
+        where id=#{id}
+    </select>
+<!--验证图形验证码接口case-->
+    <select id="validateCaptchaForClientCase" parameterType="Integer" resultType="com.youngLogin.model.ValidateCaptchaForClientCase">
+        select * from validatecaptchaforclientcase
+        where id=#{id}
+    </select>
+<!--刷新token接口case-->
+    <select id="freshTokenCase" parameterType="Integer" resultType="com.youngLogin.model.FreshTokenCase">
+        select * from freshtokencase
+        where id=#{id}
+    </select>
+ <!--用户登出接口case-->
+    <select id="logoutCase" parameterType="Integer" resultType="com.youngLogin.model.LogoutCase">
+        select * from logoutcase
+        where id=#{id}
+    </select>
+<!--用户失效接口case-->
+    <select id="invalidUserCase" parameterType="Integer" resultType="com.youngLogin.model.InvalidUserCase">
+        select * from invalidusercase
+        where id=#{id}
+    </select>
+<!--一键登录接口case-->
+    <select id="phoneLoginCase" parameterType="Integer" resultType="com.youngLogin.model.PhoneLoginCase">
+        select * from phonelogincase
+        where id=#{id}
+    </select>
+<!--发送验证码登录接口case-->
+    <select id="smsLoginCase" parameterType="Integer" resultType="com.youngLogin.model.SmsLoginCase">
+        select * from smslogincase
+        where id=#{id}
+    </select>
+<!--短信验证码登陆接口(摄影大赛)case-->
+    <select id="smsLoginForPicCase" parameterType="Integer" resultType="com.youngLogin.model.SmsLoginForPicCase">
+        select * from smsloginforpiccase
+        where id=#{id}
+    </select>
+<!--  短信验证码注册接口case  -->
+    <select id="startRegisterCase" parameterType="Integer" resultType="com.youngLogin.model.StartRegisterCase">
+        select * from startregistercase
+        where id=#{id}
+    </select>
+<!--完成注册接口case-->
+    <select id="finishRegisterCase" parameterType="Integer" resultType="com.youngLogin.model.FinishRegisterCase">
+        select * from finishregistercase
+        where id=#{id}
+    </select>
+<!--生成图形验证码接口case-->
+    <select id="captchaCase" parameterType="Integer" resultType="com.youngLogin.model.CaptchaCase">
+        select * from captchacase
+        where id=#{id}
+    </select>
+ <!--逛逛接口case-->
+    <select id="loginGGCase" parameterType="Integer" resultType="com.youngLogin.model.LoginGGCase">
+        select * from loginggcase
+        where id=#{id}
+    </select>
+<!-- 微信第三方登陆接口case-->
+    <select id="wechatLoginCase" parameterType="Integer" resultType="com.youngLogin.model.WechatLoginCase">
+        select * from wechatlogincase
+        where id=#{id}
+    </select>
+</mapper>
