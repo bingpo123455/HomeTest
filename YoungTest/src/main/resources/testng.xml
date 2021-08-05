@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="花样搜索系统">
+
+    <test name="花样搜索测试用例">
+        <classes>
+            <class name="com.young.cases.LoginTest">
+                <methods>
+                    <include name="loginTrue"/>
+                    <include name="loginFalse2"/>
+                    <include name="loginFalse3"/>
+                    <include name="loginFalse4"/>
+                    <include name="loginFalse5"/>
+                </methods>
+            </class>
+
+            <class name="com.young.cases.ValidatePhoneTest">
+                <methods>
+                    <include name="validatePhone1"/>
+                    <include name="validatePhone2"/>
+                    <include name="validatePhone3"/>
+                    <include name="validatePhone4"/>
+                </methods>
+            </class>
+
+            <class name="com.young.cases.userCase.DailyMissionBarTest">
+                <methods>
+                    <include name="dailyMissionBar1"/>
+
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="com.young.config.ExtentTestNGIReporterListener" />
+    </listeners>
+
+</suite>
