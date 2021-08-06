@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间mapper,如果有多个mapper文件，这个必须唯一 -->
+<mapper namespace="com.youngCircle.model">
+ <!--0.获取登陆接口case-->
+    <select id="loginCase" parameterType="Integer"  resultType="com.youngCircle.model.LoginCase">
+        select * from caselogintestlogin
+        where id = #{id};
+    </select>
+<!--1.1获取广场顶部列表接口-->
+    <select id="getSquareListCase" parameterType="Integer" resultType="com.youngCircle.model.SquareListCase">
+        select * from casesocialtestsquarelist
+        where id = #{id}
+    </select>
+<!--1.2查询数据实际 表 中的 相关数据-->
+    <select id="squarelist" parameterType="com.youngCircle.model.SquareListCase" resultType="com.youngCircle.model.basicmodel.SquareList">
+        select * from squarelist
+        where status=#{status} and deleteflag=#{deleteflag};
+    </select>
+<!--2.1添加关注接口-->
+    <select id="addFollowCase" parameterType="Integer" resultType="com.youngCircle.model.AddFollowCase">
+        select * from casesocialtestaddUserFollow
+        where id=#{id}
+    </select>
+
+    <select id="userFollowCase" parameterType="Integer" resultType="com.youngCircle.model.basicmodel.UserFollow">
+        select * from casesocialtestuserfollow
+        where id =#{id}
+    </select>
+<!--2.2查询当前关注总数  -->
+    <select id="userfollow" parameterType="com.youngCircle.model.AddFollowCase" resultType="com.youngCircle.model.basicmodel.UserFollow">
+        select * from userfollow
+        where uid=#{uid} and status=#{status}
+    </select>
+<!--2.3查询当前粉丝总数  -->
+    <select id="userfollow1" parameterType="com.youngCircle.model.AddFollowCase" resultType="com.youngCircle.model.basicmodel.UserFollow">
+        select * from userfollow
+        where followuid=#{fuid} and status=#{status};
+    </select>
+<!-- 5.取消关注接口 -->
+    <select id="delUserFollowCase" parameterType="Integer" resultType="com.youngCircle.model.DelUserFollowCase" flushCache="true">
+        select * from casesocialtestdelfollow
+        where id=#{id};
+    </select>
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Chapter12/Chapter12.iml" filepath="$PROJECT_DIR$/Chapter12/Chapter12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Chapter13/Chapter13.iml" filepath="$PROJECT_DIR$/Chapter13/Chapter13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Circle/Circle.iml" filepath="$PROJECT_DIR$/Circle/Circle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/HomeTest.iml" filepath="$PROJECT_DIR$/.idea/HomeTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/YoungCircle/YoungCircle.iml" filepath="$PROJECT_DIR$/YoungCircle/YoungCircle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/YoungLogin/YoungLogin.iml" filepath="$PROJECT_DIR$/YoungLogin/YoungLogin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/YoungTest/YoungTest.iml" filepath="$PROJECT_DIR$/YoungTest/YoungTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.chinaso.yong/com.chinaso.yong.iml" filepath="$PROJECT_DIR$/com.chinaso.yong/com.chinaso.yong.iml" />
+      <module fileurl="file://$PROJECT_DIR$/YoungCircle/com.chinaso.young/com.chinaso.young.iml" filepath="$PROJECT_DIR$/YoungCircle/com.chinaso.young/com.chinaso.young.iml" />
+    </modules>
+  </component>
+</project>

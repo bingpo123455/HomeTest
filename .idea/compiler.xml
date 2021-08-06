@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Chapter13" />
+        <module name="Chapter12" />
+        <module name="YoungTest" />
+        <module name="Circle" />
+        <module name="com.chinaso.yong" />
+        <module name="YoungCircle" />
+        <module name="YoungLogin" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Chapter12" target="6" />
+      <module name="Chapter13" target="1.8" />
+      <module name="Circle" target="1.5" />
+      <module name="com.chinaso.yong" target="1.5" />
+      <module name="HomeTest" target="1.5" />
+      <module name="YoungCircle" target="1.5" />
+      <module name="YoungLogin" target="6" />
+      <module name="YoungLoginTest" target="6" />
+      <module name="YoungTest" target="6" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Chapter13" options="-extdirs C:\Users\lenovo\workspace\muke\HomeTest\Chapter13/lib" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="花漾搜索系统">
+    <test name="花漾搜索登录接口测试">
+        <classes>
+            <!--准备工作  给URL赋值，创建httpClient对象-->
+            <class name="com.youngCircle.cases.ReadyTest">
+                <methods>
+                    <include name="beforeTest"/>
+                </methods>
+            </class>
+            <!--登录接口-->
+            <class name="com.youngCircle.cases.LoginTest">
+                <methods>
+                    <include name="loginTrue"/>
+                </methods>
+            </class>
+            <!--1.获取广场顶部列表接口-->
+            <class name="com.youngCircle.cases.SquareListTest">
+                <methods>
+                    <include name="squareList1"/>
+                </methods>
+            </class>
+            <!--2.关注接口-->
+            <class name="com.youngCircle.cases.AddFollowTest">
+                <methods>
+                    <include name="addFollow1"/>
+                </methods>
+            </class>
+            <!--取消关注接口-->
+            <class name="com.youngCircle.cases.DelUserFollowTest">
+                <methods>
+                    <include name="delUserFollow1"/>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+    <listeners>
+        <listener class-name="com.young.config.ExtentTestNGIReporterListener" />
+    </listeners>
+</suite>
